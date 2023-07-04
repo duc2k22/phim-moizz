@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phim</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <header>
+        <div class="menu-top">
+            <div class="logo">
+                <img src="Img/logo.jpg" alt="">
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm">
+                <button type="submit">Tìm kiếm</button>
+            </div>
+            <div class="login">
+                <a href="#">Đăng nhập</a>
+            </div>
+        </div>
+        <div class="menu-header">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="dropdown-toggle">Thể loại</a>
+                    <ul class="submenu">
+                        <li><a href="hanh-dong.html">Hành Động</a></li>
+                        <li><a href="#">Tình Cảm</a></li>
+                        <li><a href="#">Kinh Dị</a></li>
+                        <li><a href="#">Hài Hước</a></li>
+                        <li><a href="#">Khoa Học</a></li>
+                        <li><a href="#">Viễn Tưởng</a></li>
+                        <li><a href="#">Phưu Lưu</a></li>
+                        <li><a href="#">Võ Thuật</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Quốc gia</a></li>
+                <li><a href="#">Phim lẻ</a></li>
+                <li><a href="#">Phim bộ</a></li>
+            </ul>
+            <div class="yeu_thich">
+                <a href="#">Yêu thích</a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <section class="menu-section">
+        <div class="menu">
+            <h2>PHIM MỚI CẬP NHẬT</h2>
+            <ul>
+                <li><a href="#" class="active">Toàn bộ</a></li>
+                <li><a href="#">Phim lẻ</a></li>
+                <li><a href="#">Phim bộ</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="content-wrapper">
+        <aside class="top-view-sidebar">
+            <h4>Top Xem Nhiều</h4>
+            <hr>
+            <ul class="top-view-menu">
+                <li><a href="#">Ngày</a></li>
+                <li><a href="#">Tuần</a></li>
+                <li><a href="#">Tháng</a></li>
+            </ul>
+            <div class="top-view-content">
+                <a href="#" class="top-item">
+                    <span class="top-rank">1</span>
+                    Vụng Trộm Không Thể Giấu
+                    <p>Hidden Love</p>
+
+                </a>
+
+                <a href="#" class="top-item">
+                    <span class="top-rank">2</span>
+                    Tuyết Ưng Lĩnh Chủ
+                    <p>Trường Phong Độ</p>
+
+                </a>
+                <a href="#" class="top-item">
+                    <span class="top-rank">3</span>
+                    Đấu La Đại Lục
+                    <p>Chang Feng Du</p>
+
+                </a>
+
+            </div>
+        </aside>
+
+        <div class="movie-list">
+            <div class="movie-item">
+                <div class="image-container">
+                    <a href="chi-tiet.html">
+                        <img src="Img/Rebound Bật Bảng.webp" alt="Movie Title"></a>
+                    <div class="image-caption">Tập 05/08 Thuyết Minh</div>
+                </div>
+                <div class="movie-title">Movie Title</div>
+                <hr>
+                <div class="movie-info">
+                    <span class="year">Year: 2023</span>
+                    <span class="views">Views: 2000</span>
+                </div>
+            </div>
+
+
+            <div class="movie-item">
+                <img src="Img/Tà Chú Cấm.jpg" alt="Movie Title">
+                <div class="movie-title">Movie Title</div>
+                <hr>
+                <div class="movie-info">
+                    <span class="year">Year</span>
+                    <span class="views">Views</span>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="Img/Tần Lĩnh Trấn Thiên.jpg" alt="Movie Title">
+                <div class="movie-title">Movie Title</div>
+                <hr>
+
+                <div class="movie-info">
+                    <span class="year">Year</span>
+                    <span class="views">Views</span>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="Img/Tần Lĩnh Trấn Thiên.jpg" alt="Movie Title">
+                <div class="movie-title">Movie Title</div>
+                <hr>
+
+                <div class="movie-info">
+                    <span class="year">Year</span>
+                    <span class="views">Views</span>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="Img/Tần Lĩnh Trấn Thiên.jpg" alt="Movie Title">
+                <div class="movie-title">Movie Title</div>
+                <hr>
+
+                <div class="movie-info">
+                    <span class="year">Year</span>
+                    <span class="views">Views</span>
+                </div>
+
+            </div>
+            <!-- Thêm các phần tử phim khác -->
+
+        </div>
+    </div>
+
+
+    <script>
+        // JavaScript cho menu con
+        document.addEventListener('DOMContentLoaded', function () {
+            var dropdownToggle = document.querySelectorAll('.dropdown-toggle');
+
+            dropdownToggle.forEach(function (toggle) {
+                toggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var submenu = this.nextElementSibling;
+                    submenu.classList.toggle('show');
+                });
+            });
+
+            document.addEventListener('click', function (e) {
+                var target = e.target;
+                if (!target.classList.contains('dropdown-toggle')) {
+                    dropdownToggle.forEach(function (toggle) {
+                        var submenu = toggle.nextElementSibling;
+                        submenu.classList.remove('show');
+                    });
+                }
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

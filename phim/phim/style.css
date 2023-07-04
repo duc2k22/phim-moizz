@@ -1,0 +1,323 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    list-style: none;
+    text-decoration: none;
+    transition: all 0.8s ease;
+}
+header .menu-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color:aquamarine;
+    padding: 12px 20%;
+}
+.logo img{
+    width: 90px;
+}
+.search input{
+    width: 300px;
+    border: none;
+    font-size: 14px;
+    padding: 10px;
+    outline: 1px solid rgb(255, 255, 255);
+}
+.search input:hover,
+.search input:focus{
+    outline: 1px solid rgb(213, 235, 16);
+}
+.search button{
+    padding: 10px;
+    border: none;
+    margin-left: 10px;
+    cursor:alias;
+    background-color: tomato;
+    
+}
+.search button:hover,
+.search button:focus{
+    background-color: rgb(202, 115, 99);
+}
+.login {
+background-color: aquamarine;
+padding: 10px;  
+outline: 1px solid salmon;
+
+}
+.login a{
+    color: rgb(43, 43, 43);
+}
+header .menu-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color:rgb(143, 226, 199);
+    padding: 12px 20%;
+}
+.menu-header ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-header ul li a{
+    padding:10px;
+    color: black;
+}
+.menu-header ul li a:hover{
+    color: rgb(2, 26, 238);
+}
+/* CSS cho menu con */
+.menu-header ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* left: 0; */
+    background-color: #f2f2f2;
+    padding: 10px;
+    z-index: 1;
+}
+.submenu li {
+    padding: 5px 0; /* Giảm giá trị padding */
+    color: blue;
+}
+
+
+.menu-header ul li .dropdown-toggle:focus + .submenu {
+    display: block;
+}
+
+.yeu_thich{
+    background-color: rgb(143, 226, 199);
+    outline: 1px solid salmon;
+    padding: 10px;
+}
+.menu-section{
+    padding: 10px 20%;
+}
+.menu {
+    display: flex;
+    justify-content:flex-start;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    background-color: rgb(163, 175, 185);
+    box-sizing: content-box;
+  }
+  h2 {
+    position: relative;
+  }
+  
+  h2::before {
+    content: "";
+    position: absolute;
+    left: 105%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 100%;
+    background-color: black;
+  }
+   
+
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  
+  .menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: rgb(248, 248, 248);
+  }
+  
+  .menu a.active {
+    font-weight: bold;
+  }
+
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* padding: 10px 20%; */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    background-color: rgba(0, 13, 189, 0.7);
+    color: white;
+    padding: 5px;
+  }
+  
+
+.movie-item {
+    
+    /* width: calc(33.33% - 10px); */
+    margin-bottom: 20px;
+    background-color: rgb(190, 199, 195);
+}
+
+.movie-item img {
+    width: 200px; /* Đặt chiều rộng cố định */
+    height: 300px; /* Đặt chiều cao cố định */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+}
+
+.movie-item .movie-title {
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left: 5px;
+    
+}
+.movie-info {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Căn đều khoảng cách ngang */
+    margin-top: 5px;
+    font-size: 12px;
+    color: gray;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.movie-item .movie-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 12px;
+    color: gray;
+}
+/* SLIDEBAR TOP XEM NHIỀU */
+
+.content-wrapper {
+    overflow: hidden;
+    padding: 10px 20%;
+}
+
+.movie-list {
+    float: left;
+    width: 70%;
+}
+
+.top-view-sidebar {
+    float: right;
+    width: 28%;
+    background-color: rgb(175, 175, 175)  ;
+    padding: 10px;
+}
+.top-view-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.top-view-menu li a{
+    color: aliceblue;
+}
+.top-view-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 10px;
+}
+
+.top-view-content a,
+.top-view-content p {
+    color: black;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.top-view-content p{
+    margin-left: 33px;
+    opacity: 0.5;
+}
+.top-view-sidebar {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.top-view-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-view-menu li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.top-view-menu li:last-child {
+    margin-right: 0;
+}
+
+.top-view-menu a {
+    color: #555555;
+    text-decoration: none;
+}
+
+.top-view-content {
+    margin-top: 10px;
+}
+
+.top-item {
+    display: block;
+    padding: 8px 12px;
+    background: linear-gradient(to right, #ff4500, #ff8c00);
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    position: relative;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.top-item:hover {
+    background: linear-gradient(to right, #ff8c00, #ff4500);
+}
+
+.top-item .top-rank {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    color: #ff4500;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+    top: -2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
